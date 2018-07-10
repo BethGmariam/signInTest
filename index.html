@@ -13,6 +13,10 @@
       margin-left:500px;
       margin-top:200px;
     }
+    
+    a{
+      margin-left:500px;
+    }
   
   </style>
   
@@ -25,7 +29,7 @@
     <!-- <div class="g-signin2" onclick="signOut();" data-theme="dark"></div> -->
 
 
-    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+     <a href="#" onclick="signOut();">Sign out</a>
 
 
     <script>
@@ -47,6 +51,9 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://bethgmariam.github.io/TriviaGame/');
       };
 
 
